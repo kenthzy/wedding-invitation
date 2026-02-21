@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP | Sophia & Alexander</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-color': '#FFFAFA', /* Snow white/Very warm white to pop colors */
+                        'text-color': '#2D2424', /* Deep warm brown-black */
+                        'accent-color': '#C3937C', /* Matching the Clay/Terra Cotta from your palette */
+                        'heading-color': '#5D4037', /* Rich dark brown for headings */
+                        'light-gray': '#F5EBE0', /* Warm beige/grey for sections */
+                        'border-color': '#C3937C', /* Use accent for borders */
+                    },
+                    fontFamily: {
+                        'heading': ['"Antic Didone"', 'serif'],
+                        'body': ['"Antic Didone"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+         html { scroll-behavior: smooth; }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 1px;
+            background-color: #C3937C;
+            margin: 1rem auto 0;
+        }
+    </style>
+</head>
+<body class="font-body bg-bg-color text-text-color leading-relaxed overflow-x-hidden antialiased">
+    <!-- Navigation (Simplified for RSVP page) -->
+    <nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300 py-4">
+        <div class="w-full px-8 md:px-16 lg:px-24 flex justify-between items-center relative">
+            <a href="index.html" class="font-heading text-2xl font-bold tracking-wider text-heading-color hover:text-accent-color transition-colors">S & A</a>
+            <div class="nav-links flex items-center">
+                <a href="index.html" class="text-text-color hover:text-accent-color transition-colors font-medium text-sm tracking-wide uppercase">Back to Details</a>
+            </div>
+        </div>
+    </nav>
+    <!-- RSVP Section -->
+    <section class="h-auto min-h-screen py-24 flex items-center justify-center">
+        <div class="max-w-6xl w-[90%] mx-auto px-4 text-center">
+            <h2 class="section-title text-center font-heading text-4xl mb-8 relative pb-4 text-heading-color" data-aos="fade-down">RSVP</h2>
+            <p class="mb-8 max-w-[600px] mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+                We are so excited to celebrate with you! Please let us know if you can make it by August 24, 2026.
+            </p>
+            <div class="w-full max-w-[640px] h-[80vh] md:h-[1400px] mx-auto bg-white p-0 md:p-4 shadow-sm rounded-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9hootZc8o559dTLjlZGbMgnWWcj9CrXJBKpKU24bkSONLRw/viewform?embedded=true" class="w-full h-full border-0">Loading…</iframe>
+            </div>
+
+            <!-- Map Preview -->
+            <div class="mt-16 max-w-4xl mx-auto" data-aos="fade-up">
+                <h3 class="font-heading text-2xl text-heading-color mb-6">Getting There</h3>
+                <div class="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-md border border-light-gray">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019207869372!2d-122.39466868468202!3d37.76812897975988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7f9609555555%3A0x2db4711310688849!2s500%20Terry%20A%20Francois%20Blvd%2C%20San%20Francisco%2C%20CA%2094158!5e0!3m2!1sen!2sus!4v1645564841234!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <p class="mt-4 text-text-color/80">
+                    The Old Chapel<br>
+                    500 Terry Francine St. San Francisco, CA 94158
+                </p>
+            </div>
+
+            <!-- Share This Event -->
+            <div class="mt-16 mb-8" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="font-heading text-xl text-heading-color mb-4 uppercase tracking-wider">Share This Event</h3>
+                <div class="flex justify-center gap-6 text-2xl text-heading-color">
+                    <a href="#" class="hover:text-accent-color transition-colors" title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-accent-color transition-colors" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-accent-color transition-colors" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied!');" class="hover:text-accent-color transition-colors focus:outline-none" title="Copy Link"><i class="fas fa-link"></i></button>
+                </div>
+            </div>
+
+            <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
+                <a href="index.html" class="inline-block px-6 py-2 bg-heading-color text-white border border-heading-color text-sm tracking-wide uppercase transition-all duration-300 hover:bg-transparent hover:text-heading-color hover:bg-white rounded-full">Return to Wedding Details</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-heading-color text-white py-8 text-center mt-auto" data-aos="fade-up" data-aos-offset="0">
+        <p class="mb-2">&copy; 2026 Sophia & Alexander</p>
+        <p class="text-xs text-gray-400">Developed by <a href="https://inup.solutions" class="hover:text-white transition-colors" target="_blank">inup.solutions</a></p>
+    </footer>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>
